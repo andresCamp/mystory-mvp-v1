@@ -8,25 +8,7 @@ interface NextButtonProps {
 
 const NextButton: React.FC<NextButtonProps> = ({question, increaseQuestionIndex}) => {
 
-    // db.videos.add({
-    //     question: questions[questionIndex],
-    //     blob: blob
-    // }})
-
-    async function addVideo() {
-        try{
-            await db.videos.add({
-                question: question,
-                // blob: blob
-            })
-            increaseQuestionIndex();
-        }
-        catch(e){
-            console.log(e);
-        }
-    }
-
-    
+   
 
 
 
