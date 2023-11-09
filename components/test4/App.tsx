@@ -14,7 +14,7 @@ export const App = () => {
   const startRecording = () => {
     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
       mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.ondataavailable = (e) => {
+      mediaRecorder.ondataavailable = (e: BlobEvent) => {
         if (e.data.size > 0) {
           setRecordedChunks((prev) => [...prev, e.data]);
         }
